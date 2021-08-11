@@ -1,0 +1,94 @@
+<div class="container" *ngIf="user">
+  <div class="header d-flex justify-content-between">
+    <h1 class="title">"{{user.name}}"-ის სრული ინფორმაცია:
+    </h1>
+  </div>
+
+  <div class="list row">
+    <div class="col-12">
+      <div class="list_item-details">
+        <span>Name: </span>
+        {{ user.name }}
+      </div>
+      <div class="list_item-details">
+        <span>Phone: </span>
+        {{ user.phone }}
+      </div>
+      <div class="list_item-details">
+        <span>Email: </span>
+        {{ user.email }}
+      </div>
+      <div class="list_item-details">
+        <span>UserName: </span>
+        {{ user.username }}
+      </div>
+      <div class="list_item-details">
+        <span>Website: </span>
+        {{ user.website }}
+      </div>
+    </div>
+  </div>
+
+  <div class="header d-flex justify-content-between ">
+    <h1 class="title">მისამართი:
+    </h1>
+  </div>
+  <div class="list row">
+    <div class="col-12">
+      <div class="list_item-details">
+        <span>city: </span>
+        {{ user.address.city }}
+      </div>
+      <div class="list_item-details">
+        <span>geo: </span>
+        lat: {{ user.address.geo.lat }}, 
+        lng: {{ user.address.geo.lng }}
+      </div>
+      <div class="list_item-details">
+        <span>street: </span>
+        {{ user.address.street }}
+      </div>
+      <div class="list_item-details">
+        <span>suite: </span>
+        {{ user.address.suite }}
+      </div>
+      <div class="list_item-details">
+        <span>zipcode: </span>
+        {{ user.address.zipcode }}
+      </div>
+    </div>
+
+    <div class="header d-flex justify-content-between ">
+      <h1 class="title">კომპანია:
+      </h1>
+    </div>
+    
+    <div class="list row">
+      <div class="col-12">
+        <div class="list_item-details">
+          <span>name: </span>
+          {{ user.company.name }}
+        </div>
+        <div class="list_item-details">
+          <span>bs: </span>
+          {{ user.company.bs }}
+        </div>
+        <div class="list_item-details">
+          <span>catchPhrase: </span>
+          {{ user.company.catchPhrase }}
+        </div>
+      </div>
+  </div>
+  <div class="row justify-content-end"> 
+    <div class="header col-3">
+      <div class="list_item"  routerLink="/users">
+        უკან დაბრუნება
+      </div>
+    </div>
+    <div class="header col-3">
+      <div class="list_item" (click)="onClick()">
+        პოსტები
+      </div>
+    </div>
+  </div>
+</div>

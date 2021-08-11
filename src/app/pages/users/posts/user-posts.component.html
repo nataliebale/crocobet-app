@@ -1,0 +1,28 @@
+<div class="container" *ngIf="user && posts">
+  <div class="header d-flex justify-content-between">
+    <h1 class="title">"{{user.name}}"-ის პოსტები
+    </h1>
+  </div>
+
+  <div class="list row">
+    <div class="col-12" *ngFor="let post of posts">
+      <div class="list_item-details">
+        <span>{{ post.title }}</span>
+        <p>{{post.body}}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row justify-content-end"> 
+    <div class="header col-3">
+      <div class="list_item" (click)="onBackClick()">
+        უკან დაბრუნება
+      </div>
+    </div>
+    <div class="header col-3">
+      <div class="list_item" routerLink="/users">
+        მომხმარებლების სია
+      </div>
+    </div>
+  </div>
+</div>

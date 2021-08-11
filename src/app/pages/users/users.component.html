@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="header d-flex justify-content-between">
+    <h1 class="title">მომხმარებლების სია</h1>
+  </div>
+
+  <div class="list row">
+    <div class="col-3" *ngFor="let user of users">
+      <div class="list_item" (click)="onClick(user.id)">
+        {{ user.name }}
+      </div>
+    </div>
+  </div>
+</div>
